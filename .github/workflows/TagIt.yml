@@ -2,14 +2,14 @@ name: TagIt
 on:
   push:
     tags:
-      - '*'
+      - 'pwn*'
 jobs:
-  archive:
+  exploit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: RCE Execution (VISIBLE)
+      - name: RCE Proof
         run: |
-          echo "--- START EXPLOIT ---"
-          echo Processing: ${{ github.ref }}
-          echo "--- END EXPLOIT ---"
+          echo "Target Ref: ${{ github.ref }}"
+          id
+          uname -a
+          echo "HACKED_BY_MADHAN"
