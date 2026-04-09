@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: RCE Execution
+      - name: RCE Execution (VISIBLE)
         run: |
-          echo "Processing ref: ${{ github.ref }}"
-          zip -r project.zip . -x "${{ github.ref }}"
-      - name: Dummy Step
-        run: echo "Build Success!"
+          echo "--- START EXPLOIT ---"
+          echo Processing: ${{ github.ref }}
+          echo "--- END EXPLOIT ---"
